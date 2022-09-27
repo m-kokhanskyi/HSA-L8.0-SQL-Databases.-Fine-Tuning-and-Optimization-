@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  mysql_rsa_8:
+    container_name: mysql_rsa_8
+    image: mysql:latest
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+    - dbdata:/var/lib/mysql
+    environment:
+    - "MYSQL_DATABASE=max"
+    - "MYSQL_USER=max"
+    - "MYSQL_PASSWORD=secret"
+    - "MYSQL_ROOT_PASSWORD=root"
+    expose:
+    - 3306
+    ports:
+    - 2345:3306
+volumes:
+  dbdata:

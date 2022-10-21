@@ -1,7 +1,7 @@
 42 млн записів
 
 > select count(*) from clients
-> where birthday > '2019-10-29'
+> where birthday > '2019-10-28'
 > and  birthday < '2020-10-29'
 
 | Without index | With BTREE index | With 'HASH' index |

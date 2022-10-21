@@ -1,6 +1,6 @@
 42 млн записів
 
-> explain select count(*) from clients
+> select count(*) from clients
 > where birthday > '2019-10-29'
 > and  birthday < '2020-10-29'
 
